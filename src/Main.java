@@ -2,7 +2,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("Task 1");
+        System.out.println(" Task 1");
 
         UserValidator validator = new UserValidator();
 
@@ -42,5 +42,20 @@ public class Main {
 
         System.out.println("Weekend price: " + calculator.calculate(order, weekend)
         );
+
+        System.out.println("\n Task 3");
+
+        Order storeOrder = new Order("ORD-100", "Anna Kowalska");
+
+        storeOrder.addItem(new Order.OrderItem("Keyboard", 249.99, 1));
+        storeOrder.addItem(new Order.OrderItem("Mouse", 99.99, 2));
+
+        OrderSummary summary = new OrderSummary(
+                storeOrder.getOrderNumber(),
+                storeOrder.getCustomerName(),
+                storeOrder.total()
+        );
+
+        System.out.println(summary);
     }
 }
