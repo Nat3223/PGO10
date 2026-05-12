@@ -57,5 +57,18 @@ public class Main {
         );
 
         System.out.println(summary);
+
+        System.out.println("\n Task 4");
+
+        LibraryAccount account = new LibraryAccount("John Smith", 3, 5);
+
+        LibraryAccount.FineCalculator fineCalculator = account.new FineCalculator();
+
+        double fine = fineCalculator.calculate();
+
+        MessagePrinter printer = message -> System.out.println("[LIBRARY] " + message);
+
+        printer.print("Reader: " + account.getReaderName() + ", fine: " + fine + " PLN");
+
     }
 }
